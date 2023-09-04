@@ -1,0 +1,33 @@
+<div class="content">
+    <h1>{{title}}</h1>
+
+    <form class="formContainer" [formGroup]="form">
+        <mat-form-field>
+            <mat-label>Descripcion</mat-label>
+            <input matInput formControlName="descripcion">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Precio</mat-label>
+            <input matInput formControlName="precio" type="number">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Imagen</mat-label>
+            <input matInput formControlName="imagen">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>PorcentajeIva</mat-label>
+            <input matInput formControlName="porcentajeIva" type="number">
+        </mat-form-field>
+    </form>
+
+    <div class="btns">
+        <button *ngIf="data.product" mat-raised-button (click)="closeDialog()">Cancelar</button>
+        <button *ngIf="data.product" mat-raised-button color="warn" (click)="deleteProduct()">Eliminar</button>
+        <button *ngIf="data.product" mat-raised-button color="primary" (click)="editProduct()">Editar</button>
+        <button *ngIf="!data.product" mat-raised-button color="primary" (click)="createProduct()">Guardar</button>
+    </div>
+
+</div>

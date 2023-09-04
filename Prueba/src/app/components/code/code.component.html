@@ -1,0 +1,21 @@
+<div class="content">
+    <h1>
+        {{title}}
+    </h1>
+
+    <mat-form-field>
+        <mat-label>Frase</mat-label>
+        <input matInput [(ngModel)]="frase">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Clave</mat-label>
+        <input matInput [(ngModel)]="clave" type="number">
+    </mat-form-field>
+
+    <h4 *ngIf="resultado">Resultado: {{resultado}}</h4>
+
+    <button *ngIf="encode" mat-raised-button color="primary" (click)="encriptar()">Encriptar</button>
+    <button *ngIf="!encode" mat-raised-button color="primary" (click)="desencriptar()">Desencriptar</button>
+
+</div>

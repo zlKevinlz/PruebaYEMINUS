@@ -1,0 +1,16 @@
+.bg{
+    margin: 20px;
+    background-color: rgb(252, 202, 179);
+    border-radius: 10px;
+    height: calc(100vh - 88px);
+
+    .header{
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .list{
+        padding: 20px;
+    }
+}
